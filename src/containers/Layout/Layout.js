@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Aux from "../../hoc/Aux";
 import classes from "./Layout.module.css";
 import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
 import SideDrawer from "../../components/Navigation/SideDrawer/SideDrawer";
@@ -15,14 +14,14 @@ const Layout = (props) => {
   };
 
   return (
-    <Aux>
+    <>
       <Toolbar openSideDrawer={sideDrawerOpenHandler} />
       <SideDrawer
         closed={sideDrawerClosedHandler}
         open={state.showSideDrawer}
       />
       <main className={classes.content}>{props.children}</main>
-    </Aux>
+    </>
   );
 };
 

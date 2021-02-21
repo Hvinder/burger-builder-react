@@ -3,7 +3,7 @@ import classes from "./Modal.module.css";
 import Backdrop from "../Backdrop/Backdrop";
 
 const Modal = (props) => {
-  useEffect(() => {}, [props.show]);
+  useEffect(() => {}, [props.show, props.children]);
   return (
     <>
       <Backdrop show={props.show} clicked={props.modalClosed} />
